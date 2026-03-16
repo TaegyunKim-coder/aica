@@ -1,9 +1,11 @@
 ---
-description: Deploy and push changes from this project to the aica GitHub repository
+description: Deploy and push changes from this project to the aica GitHub repository (workflow as per Git)
 alwaysApply: true
 ---
 
 # Deploy to GitHub (aica)
+
+Workflow follows the Git work cycle: work in your primary repository, then push to your public repository ([gitcore-tutorial](https://git-scm.com/docs/gitcore-tutorial)).
 
 ## Repository
 
@@ -11,21 +13,22 @@ alwaysApply: true
 - **URL**: https://github.com/TaegyunKim-coder/aica.git
 - **Default branch**: `main`
 
+## Deploy as per Git (push to public repository)
+
+1. **Prepare work repository** (one-time): already done via `git clone`; `origin` points to GitHub.
+2. **Do your work** in this repo (e.g. Cursor-generated files under `aica`).
+3. **Deploy = push to GitHub:**
+   - Stage: `git add .` (or specific paths)
+   - Commit: `git commit -m "Your message"`
+   - Push: `git push origin main` (or `git push`)
+
 ## Before Pushing
 
-1. Ensure changes are committed: `git status` should show a clean working tree or only intended changes.
-2. If identity is needed in this repo:
-   - `git config user.name "TaegyunKim-coder"`
-   - `git config user.email "TaegyunKim-coder@users.noreply.github.com"`
-
-## Deploy / Push Steps
-
-1. Stage changes: `git add .` (or specific paths).
-2. Commit with a clear message: `git commit -m "Your message"`.
-3. Push to GitHub: `git push -u origin main` (use `git push` after the first time).
+- Run `git status` to see changes. Ensure only intended files are staged.
+- If identity is needed: `git config user.name "TaegyunKim-coder"` and `git config user.email "TaegyunKim-coder@users.noreply.github.com"`
 
 ## When Asked to Deploy
 
-- Run the above steps in order.
-- Use the project root: `C:\Users\BioWiNS\aica` (or `aica` from workspace).
-- Prefer PowerShell-compatible commands (e.g. `;` instead of `&&` for chaining).
+- Run the deploy steps above in order.
+- Use project root: `C:\Users\BioWiNS\aica` (or `aica` from workspace).
+- Use PowerShell-compatible commands (e.g. `;` instead of `&&`).

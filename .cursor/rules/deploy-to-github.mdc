@@ -1,0 +1,31 @@
+---
+description: Deploy and push changes from this project to the aica GitHub repository
+alwaysApply: true
+---
+
+# Deploy to GitHub (aica)
+
+## Repository
+
+- **Remote**: `origin`
+- **URL**: https://github.com/TaegyunKim-coder/aica.git
+- **Default branch**: `main`
+
+## Before Pushing
+
+1. Ensure changes are committed: `git status` should show a clean working tree or only intended changes.
+2. If identity is needed in this repo:
+   - `git config user.name "TaegyunKim-coder"`
+   - `git config user.email "TaegyunKim-coder@users.noreply.github.com"`
+
+## Deploy / Push Steps
+
+1. Stage changes: `git add .` (or specific paths).
+2. Commit with a clear message: `git commit -m "Your message"`.
+3. Push to GitHub: `git push -u origin main` (use `git push` after the first time).
+
+## When Asked to Deploy
+
+- Run the above steps in order.
+- Use the project root: `C:\Users\BioWiNS\aica` (or `aica` from workspace).
+- Prefer PowerShell-compatible commands (e.g. `;` instead of `&&` for chaining).

@@ -4,6 +4,9 @@ import { join } from 'path';
 const buildDir = join(process.cwd(), 'build');
 mkdirSync(buildDir, { recursive: true });
 
+// So GitHub Pages doesn't use Jekyll (avoids ignoring files starting with _)
+writeFileSync(join(buildDir, '.nojekyll'), '');
+
 writeFileSync(
   join(buildDir, 'index.html'),
   `<!DOCTYPE html>

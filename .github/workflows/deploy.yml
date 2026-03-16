@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed so the workflow can push to gh-pages
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
